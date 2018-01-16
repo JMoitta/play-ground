@@ -10,8 +10,8 @@ function inicia() {
 	personagemCorpo = document.getElementById('personagem');
 	dx = 0;
 	dy = 0;
-	px = 0;
-	py = 0;
+	px = 100;
+	py = 200;
 	vel = 4;
 	document.addEventListener('keydown', keydown);
 	document.addEventListener('keyup', keyup);

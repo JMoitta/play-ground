@@ -6,7 +6,6 @@
     animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	transform: rotateX(150deg);
 }
 .personagem-corpo .circulo-vermelho {
 	animation-name: circulo-animation;
@@ -18,8 +17,8 @@
 	border-radius: 100%;
 	border: 5px solid black;
 	background-color: red;
-	height: 140px;
-	width: 140px;
+	height: 150px;
+	width: 150px;
 }
 
 .quadrado-preto {
