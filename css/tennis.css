@@ -1,0 +1,47 @@
+#jogo{
+    background-color: rgb(132, 122, 40);
+	border: 15px solid #c56b1d;
+	border-style: ridge;
+	height: 500px;
+	width: 1100px;
+	margin: 60px auto;
+	position:relative;
+}
+#jogador1{
+	width: 25px;
+	height: 130px;
+	background-color: blue;
+	position:absolute;
+	float:left;
+}
+#area1{
+	float:left;
+	position:relative;
+	display: inile
+}
+#area2{
+    transform: translate(-25px,0);
+	float:right;
+	position:relative;
+}
+#jogador2{
+	width: 25px;
+	height: 130px;
+	background-color: #560000;
+	position:absolute;
+	float:right;
+}
+.posicaoInicial {
+	top: 185px;
+}
+#bola{
+	height: 35px;
+	width: 35px;
+    background-color: #eae2e2;
+    border-radius: 100%;
+	position:absolute;
+}
+.bolaPosicaoInicial {
+	left: 532.5px;
+	top: 232.5px;
+}

@@ -1,0 +1,72 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="css/estilo.css">
+<style>
+.div {
+    background-color: red;
+    width: 250px;
+    height: 10px;
+}
+#div2 {
+    margin-top: 50px;
+}
+</style>
+</head>
+<body style="position: relative;">
+	<div id="SomeElementYouWantToAnimate" class="div">
+	</div>
+	
+	<div id="personagem" class="personagem-corpo">
+	
+		<div class="quadrado-preto">
+		</div>
+		<div class="circulo-vermelho">
+		</div>
+	
+	</div>
+	
+	<div id="personagem1" style="width: 10px;height: 20px;background-color:blue;>
+	</div>
+	<input id="div2"/>
+	<script>
+		var start = null;
+		var i = 0;
+		var oldTimestamp = 0;
+		var element = document.getElementById('SomeElementYouWantToAnimate');
+		element.style.position = 'absolute';
+		var element2 = document.getElementById('div2');
+
+		function step(timestamp) {
+			console.log("diferencia: " + (timestamp - oldTimestamp));
+			oldTimestamp = timestamp;
+			console.log("timestamp: " + timestamp);
+			if (!start) start = timestamp;
+			console.log("start: " + start);
+			var progress = timestamp - start;
+			console.log("progress: " + progress);
+			// console.log(i++);
+			console.log("Math.min: " + Math.min(progress / 10, 200));
+			element.style.left = Math.min(progress / 10, 200) + 'px';
+			if (progress < 2000) {
+				window.requestAnimationFrame(step);
+			}
+			else {
+				//alert('');
+				i = 0;
+				window.requestAnimationFrame(step2);
+			}
+		}
+		i = 0;
+		function step2(timestamp) {
+			console.log(i++);
+			element2.value = i+ "d";
+			if (i < 60) {
+				window.requestAnimationFrame(step2);
+			}
+		}
+		window.requestAnimationFrame(step);
+		// window.requestAnimationFrame(step2);
+</script>
+<script src="js/jogador.js">
+</script>
+</body>
